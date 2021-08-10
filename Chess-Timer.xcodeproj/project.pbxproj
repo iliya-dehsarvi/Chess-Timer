@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		268D880226C0D08100602B4C /* Chess_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D880126C0D08100602B4C /* Chess_TimerTests.swift */; };
 		268D880D26C0D08100602B4C /* Chess_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D880C26C0D08100602B4C /* Chess_TimerUITests.swift */; };
 		268D881F26C0D11900602B4C /* digital-7 in Resources */ = {isa = PBXBuildFile; fileRef = 268D881E26C0D11900602B4C /* digital-7 */; };
+		2E2A75A8F7F21581CD1CF6BA /* Pods_Chess_TimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488FD06B1C7D21D21C172074 /* Pods_Chess_TimerTests.framework */; };
+		3A508F6EAECADF4ABAF33B47 /* Pods_Chess_Timer_Chess_TimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7777A408FD8C6213F3106B40 /* Pods_Chess_Timer_Chess_TimerUITests.framework */; };
+		3F866813B91656350017C234 /* Pods_Chess_Timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152AA0098C675ECB1AE08E8F /* Pods_Chess_Timer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		088FC678E0062CFAFA4F0A2E /* Pods-Chess-Timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess-Timer.debug.xcconfig"; path = "Target Support Files/Pods-Chess-Timer/Pods-Chess-Timer.debug.xcconfig"; sourceTree = "<group>"; };
+		152AA0098C675ECB1AE08E8F /* Pods_Chess_Timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_Timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		203A0A52864BD5D1FB3CC59F /* Pods-Chess-Timer-Chess-TimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess-Timer-Chess-TimerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Chess-Timer-Chess-TimerUITests/Pods-Chess-Timer-Chess-TimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		268D87E426C0D07600602B4C /* Chess-Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chess-Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		268D87E726C0D07600602B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268D87E926C0D07600602B4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,12 @@
 		268D880C26C0D08100602B4C /* Chess_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chess_TimerUITests.swift; sourceTree = "<group>"; };
 		268D880E26C0D08100602B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		268D881E26C0D11900602B4C /* digital-7 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "digital-7"; sourceTree = "<group>"; };
+		3A1FFA5B7574744455A4B302 /* Pods-Chess-TimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess-TimerTests.release.xcconfig"; path = "Target Support Files/Pods-Chess-TimerTests/Pods-Chess-TimerTests.release.xcconfig"; sourceTree = "<group>"; };
+		488FD06B1C7D21D21C172074 /* Pods_Chess_TimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_TimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7777A408FD8C6213F3106B40 /* Pods_Chess_Timer_Chess_TimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_Timer_Chess_TimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		991373D4271514333A145B3D /* Pods-Chess-Timer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess-Timer.release.xcconfig"; path = "Target Support Files/Pods-Chess-Timer/Pods-Chess-Timer.release.xcconfig"; sourceTree = "<group>"; };
+		C7ACD6AC53C855C1D8CE98BA /* Pods-Chess-Timer-Chess-TimerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess-Timer-Chess-TimerUITests.release.xcconfig"; path = "Target Support Files/Pods-Chess-Timer-Chess-TimerUITests/Pods-Chess-Timer-Chess-TimerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EF70B89AE843FED4C855CFDA /* Pods-Chess-TimerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess-TimerTests.debug.xcconfig"; path = "Target Support Files/Pods-Chess-TimerTests/Pods-Chess-TimerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F866813B91656350017C234 /* Pods_Chess_Timer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E2A75A8F7F21581CD1CF6BA /* Pods_Chess_TimerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A508F6EAECADF4ABAF33B47 /* Pods_Chess_Timer_Chess_TimerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2640707826C23881003F405D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				268D87E726C0D07600602B4C /* AppDelegate.swift */,
+				268D87E926C0D07600602B4C /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		2640707926C23892003F405D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2640707A26C2389E003F405D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				268D87ED26C0D07600602B4C /* Main.storyboard */,
+				268D87F526C0D08100602B4C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2640707B26C238A9003F405D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				268D87EB26C0D07600602B4C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		268D87DB26C0D07600602B4C = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +135,8 @@
 				268D880026C0D08100602B4C /* Chess-TimerTests */,
 				268D880B26C0D08100602B4C /* Chess-TimerUITests */,
 				268D87E526C0D07600602B4C /* Products */,
+				D83D5549FEF3809C41D7D33F /* Pods */,
+				C5FDD625D4B3A233B0803C4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,12 +153,11 @@
 		268D87E626C0D07600602B4C /* Chess-Timer */ = {
 			isa = PBXGroup;
 			children = (
-				268D87E726C0D07600602B4C /* AppDelegate.swift */,
-				268D87E926C0D07600602B4C /* SceneDelegate.swift */,
-				268D87EB26C0D07600602B4C /* ViewController.swift */,
-				268D87ED26C0D07600602B4C /* Main.storyboard */,
+				2640707826C23881003F405D /* Delegates */,
+				2640707926C23892003F405D /* Model */,
+				2640707A26C2389E003F405D /* View */,
+				2640707B26C238A9003F405D /* Controller */,
 				268D87F326C0D08100602B4C /* Assets.xcassets */,
-				268D87F526C0D08100602B4C /* LaunchScreen.storyboard */,
 				268D87F826C0D08100602B4C /* Info.plist */,
 				268D881D26C0D0C200602B4C /* fonts */,
 				268D87F026C0D07600602B4C /* Chess_Timer.xcdatamodeld */,
@@ -142,6 +191,29 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		C5FDD625D4B3A233B0803C4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				152AA0098C675ECB1AE08E8F /* Pods_Chess_Timer.framework */,
+				7777A408FD8C6213F3106B40 /* Pods_Chess_Timer_Chess_TimerUITests.framework */,
+				488FD06B1C7D21D21C172074 /* Pods_Chess_TimerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D83D5549FEF3809C41D7D33F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				088FC678E0062CFAFA4F0A2E /* Pods-Chess-Timer.debug.xcconfig */,
+				991373D4271514333A145B3D /* Pods-Chess-Timer.release.xcconfig */,
+				203A0A52864BD5D1FB3CC59F /* Pods-Chess-Timer-Chess-TimerUITests.debug.xcconfig */,
+				C7ACD6AC53C855C1D8CE98BA /* Pods-Chess-Timer-Chess-TimerUITests.release.xcconfig */,
+				EF70B89AE843FED4C855CFDA /* Pods-Chess-TimerTests.debug.xcconfig */,
+				3A1FFA5B7574744455A4B302 /* Pods-Chess-TimerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 268D881126C0D08100602B4C /* Build configuration list for PBXNativeTarget "Chess-Timer" */;
 			buildPhases = (
+				43A26DE94EA38069F4B38B37 /* [CP] Check Pods Manifest.lock */,
 				268D87E026C0D07600602B4C /* Sources */,
 				268D87E126C0D07600602B4C /* Frameworks */,
 				268D87E226C0D07600602B4C /* Resources */,
+				F730D4D4A36F9C0B92FC87E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,6 +240,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 268D881426C0D08100602B4C /* Build configuration list for PBXNativeTarget "Chess-TimerTests" */;
 			buildPhases = (
+				867CEC85CEC6F39E62908C34 /* [CP] Check Pods Manifest.lock */,
 				268D87F926C0D08100602B4C /* Sources */,
 				268D87FA26C0D08100602B4C /* Frameworks */,
 				268D87FB26C0D08100602B4C /* Resources */,
@@ -184,9 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 268D881726C0D08100602B4C /* Build configuration list for PBXNativeTarget "Chess-TimerUITests" */;
 			buildPhases = (
+				A133D098AC8FBE774224B9FB /* [CP] Check Pods Manifest.lock */,
 				268D880426C0D08100602B4C /* Sources */,
 				268D880526C0D08100602B4C /* Frameworks */,
 				268D880626C0D08100602B4C /* Resources */,
+				B4045FD77F48BD179D4F4170 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,6 +344,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43A26DE94EA38069F4B38B37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chess-Timer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		867CEC85CEC6F39E62908C34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chess-TimerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A133D098AC8FBE774224B9FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chess-Timer-Chess-TimerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4045FD77F48BD179D4F4170 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chess-Timer-Chess-TimerUITests/Pods-Chess-Timer-Chess-TimerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chess-Timer-Chess-TimerUITests/Pods-Chess-Timer-Chess-TimerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chess-Timer-Chess-TimerUITests/Pods-Chess-Timer-Chess-TimerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F730D4D4A36F9C0B92FC87E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chess-Timer/Pods-Chess-Timer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chess-Timer/Pods-Chess-Timer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chess-Timer/Pods-Chess-Timer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		268D87E026C0D07600602B4C /* Sources */ = {
@@ -449,6 +629,7 @@
 		};
 		268D881226C0D08100602B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 088FC678E0062CFAFA4F0A2E /* Pods-Chess-Timer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +650,7 @@
 		};
 		268D881326C0D08100602B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 991373D4271514333A145B3D /* Pods-Chess-Timer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -489,6 +671,7 @@
 		};
 		268D881526C0D08100602B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF70B89AE843FED4C855CFDA /* Pods-Chess-TimerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +694,7 @@
 		};
 		268D881626C0D08100602B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A1FFA5B7574744455A4B302 /* Pods-Chess-TimerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -533,6 +717,7 @@
 		};
 		268D881826C0D08100602B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 203A0A52864BD5D1FB3CC59F /* Pods-Chess-Timer-Chess-TimerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -553,6 +738,7 @@
 		};
 		268D881926C0D08100602B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7ACD6AC53C855C1D8CE98BA /* Pods-Chess-Timer-Chess-TimerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

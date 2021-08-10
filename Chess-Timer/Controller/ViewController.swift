@@ -6,21 +6,15 @@
 //
 
 import UIKit
+import Charts
 
 class ViewController: UIViewController {
 	
+	@IBOutlet weak var timerLabel: UILabel!
+	@IBOutlet weak var timerPerMoveChart: LineChartView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		for family: String in UIFont.familyNames
-		{
-			print(family)
-			for names: String in UIFont.fontNames(forFamilyName: family)
-			{
-				print("== \(names)")
-			}
-		}
 	}
-	
-	
 }
 
