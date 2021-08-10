@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2640708026C2940A003F405D /* digital-7 (mono italic).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2640707C26C29409003F405D /* digital-7 (mono italic).ttf */; };
+		2640708126C2940A003F405D /* digital-7 (italic).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2640707D26C29409003F405D /* digital-7 (italic).ttf */; };
+		2640708226C2940A003F405D /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2640707E26C29409003F405D /* digital-7.ttf */; };
+		2640708326C2940A003F405D /* digital-7 (mono).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2640707F26C2940A003F405D /* digital-7 (mono).ttf */; };
 		268D87E826C0D07600602B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D87E726C0D07600602B4C /* AppDelegate.swift */; };
 		268D87EA26C0D07600602B4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D87E926C0D07600602B4C /* SceneDelegate.swift */; };
 		268D87EC26C0D07600602B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D87EB26C0D07600602B4C /* ViewController.swift */; };
@@ -16,7 +20,6 @@
 		268D87F726C0D08100602B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 268D87F526C0D08100602B4C /* LaunchScreen.storyboard */; };
 		268D880226C0D08100602B4C /* Chess_TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D880126C0D08100602B4C /* Chess_TimerTests.swift */; };
 		268D880D26C0D08100602B4C /* Chess_TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D880C26C0D08100602B4C /* Chess_TimerUITests.swift */; };
-		268D881F26C0D11900602B4C /* digital-7 in Resources */ = {isa = PBXBuildFile; fileRef = 268D881E26C0D11900602B4C /* digital-7 */; };
 		2E2A75A8F7F21581CD1CF6BA /* Pods_Chess_TimerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488FD06B1C7D21D21C172074 /* Pods_Chess_TimerTests.framework */; };
 		3A508F6EAECADF4ABAF33B47 /* Pods_Chess_Timer_Chess_TimerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7777A408FD8C6213F3106B40 /* Pods_Chess_Timer_Chess_TimerUITests.framework */; };
 		3F866813B91656350017C234 /* Pods_Chess_Timer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152AA0098C675ECB1AE08E8F /* Pods_Chess_Timer.framework */; };
@@ -43,6 +46,10 @@
 		088FC678E0062CFAFA4F0A2E /* Pods-Chess-Timer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess-Timer.debug.xcconfig"; path = "Target Support Files/Pods-Chess-Timer/Pods-Chess-Timer.debug.xcconfig"; sourceTree = "<group>"; };
 		152AA0098C675ECB1AE08E8F /* Pods_Chess_Timer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_Timer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		203A0A52864BD5D1FB3CC59F /* Pods-Chess-Timer-Chess-TimerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess-Timer-Chess-TimerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Chess-Timer-Chess-TimerUITests/Pods-Chess-Timer-Chess-TimerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2640707C26C29409003F405D /* digital-7 (mono italic).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7 (mono italic).ttf"; sourceTree = "<group>"; };
+		2640707D26C29409003F405D /* digital-7 (italic).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7 (italic).ttf"; sourceTree = "<group>"; };
+		2640707E26C29409003F405D /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		2640707F26C2940A003F405D /* digital-7 (mono).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7 (mono).ttf"; sourceTree = "<group>"; };
 		268D87E426C0D07600602B4C /* Chess-Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chess-Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		268D87E726C0D07600602B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268D87E926C0D07600602B4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +65,6 @@
 		268D880826C0D08100602B4C /* Chess-TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Chess-TimerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		268D880C26C0D08100602B4C /* Chess_TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chess_TimerUITests.swift; sourceTree = "<group>"; };
 		268D880E26C0D08100602B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		268D881E26C0D11900602B4C /* digital-7 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "digital-7"; sourceTree = "<group>"; };
 		3A1FFA5B7574744455A4B302 /* Pods-Chess-TimerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chess-TimerTests.release.xcconfig"; path = "Target Support Files/Pods-Chess-TimerTests/Pods-Chess-TimerTests.release.xcconfig"; sourceTree = "<group>"; };
 		488FD06B1C7D21D21C172074 /* Pods_Chess_TimerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_TimerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7777A408FD8C6213F3106B40 /* Pods_Chess_Timer_Chess_TimerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chess_Timer_Chess_TimerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,7 +192,10 @@
 		268D881D26C0D0C200602B4C /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				268D881E26C0D11900602B4C /* digital-7 */,
+				2640707D26C29409003F405D /* digital-7 (italic).ttf */,
+				2640707C26C29409003F405D /* digital-7 (mono italic).ttf */,
+				2640707F26C2940A003F405D /* digital-7 (mono).ttf */,
+				2640707E26C29409003F405D /* digital-7.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -322,10 +331,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2640708326C2940A003F405D /* digital-7 (mono).ttf in Resources */,
 				268D87F726C0D08100602B4C /* LaunchScreen.storyboard in Resources */,
+				2640708226C2940A003F405D /* digital-7.ttf in Resources */,
+				2640708126C2940A003F405D /* digital-7 (italic).ttf in Resources */,
+				2640708026C2940A003F405D /* digital-7 (mono italic).ttf in Resources */,
 				268D87F426C0D08100602B4C /* Assets.xcassets in Resources */,
 				268D87EF26C0D07600602B4C /* Main.storyboard in Resources */,
-				268D881F26C0D11900602B4C /* digital-7 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
