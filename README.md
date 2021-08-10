@@ -1,2 +1,2 @@
-# Chess-Timer
+# Advanced-Chess-Timer
  
