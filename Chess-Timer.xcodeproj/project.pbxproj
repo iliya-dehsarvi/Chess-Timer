@@ -11,6 +11,7 @@
 		2640708126C2940A003F405D /* digital-7 (italic).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2640707D26C29409003F405D /* digital-7 (italic).ttf */; };
 		2640708226C2940A003F405D /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2640707E26C29409003F405D /* digital-7.ttf */; };
 		2640708326C2940A003F405D /* digital-7 (mono).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2640707F26C2940A003F405D /* digital-7 (mono).ttf */; };
+		264070F726C48208003F405D /* TimerUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264070F626C48208003F405D /* TimerUIView.swift */; };
 		268D87E826C0D07600602B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D87E726C0D07600602B4C /* AppDelegate.swift */; };
 		268D87EA26C0D07600602B4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D87E926C0D07600602B4C /* SceneDelegate.swift */; };
 		268D87EC26C0D07600602B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268D87EB26C0D07600602B4C /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		2640707D26C29409003F405D /* digital-7 (italic).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7 (italic).ttf"; sourceTree = "<group>"; };
 		2640707E26C29409003F405D /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		2640707F26C2940A003F405D /* digital-7 (mono).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7 (mono).ttf"; sourceTree = "<group>"; };
+		264070F626C48208003F405D /* TimerUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerUIView.swift; sourceTree = "<group>"; };
 		268D87E426C0D07600602B4C /* Chess-Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chess-Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		268D87E726C0D07600602B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		268D87E926C0D07600602B4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				268D87ED26C0D07600602B4C /* Main.storyboard */,
 				268D87F526C0D08100602B4C /* LaunchScreen.storyboard */,
+				264070F626C48208003F405D /* TimerUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				268D87EC26C0D07600602B4C /* ViewController.swift in Sources */,
 				268D87E826C0D07600602B4C /* AppDelegate.swift in Sources */,
 				268D87F226C0D07600602B4C /* Chess_Timer.xcdatamodeld in Sources */,
+				264070F726C48208003F405D /* TimerUIView.swift in Sources */,
 				268D87EA26C0D07600602B4C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,53 +12,43 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var timerLabel: UILabel!
 	
-	var count = 0
-	var seconds = 9
+	@IBOutlet weak var backgroundView1: UIView!
+	var millieSeconds = 120000
 	
 	var timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(update), userInfo: nil, repeats: true)
-
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		timer.invalidate()
+		setTimerLabel(millieSec: millieSeconds)
+		
+		backgroundView1.layer.cornerRadius = 30
+		backgroundView1.layer.masksToBounds = true
+		backgroundView1.transform = backgroundView1.transform.rotated(by: CGFloat.pi)
 	}
 	
 	@objc func update() {
-//	    if(count > -1) {
-//		    if String(count).count == 1 {
-//			    timerLabel.text = "00:0\(seconds).0\(count)"
-//		    } else {
-//			    timerLabel.text = "00:0\(seconds).\(count)"
-//		    }
-//		    count-=1
-//	    } else if (seconds > 0) {
-//		    if String(count).count == 1 {
-//			    timerLabel.text = "00:0\(seconds).0\(count)"
-//		    } else {
-//			    timerLabel.text = "00:0\(seconds).\(count)"
-//		    }
-//		    count=100
-//		    seconds-=1
-//	    }
-		setTimerLabel(millieSec: count)
-		count += 1
+		setTimerLabel(millieSec: millieSeconds)
+		millieSeconds -= 1
 	}
 	
 	private func setTimerLabel(millieSec: Int) {
-		var min = "\(Int(Double(millieSec)*1.66667e-5))"
-		if min.count == 1 {
-			min = "0\(min)"
+		print(millieSeconds)
+		if millieSeconds == 0 {
+			self.timer.invalidate()
 		}
-		
-		var sec = "\(Int((Double(millieSec)*0.0001).truncatingRemainder(dividingBy: 60)*100))"
-		if sec.count == 1 {
-			sec = "0\(sec)"
+		var min = "\(Int((millieSec/1000)/60))"
+//		if min.count == 1 {
+//			min = "0\(min)"
+//		}
+		var secStr: String
+		var sec = round(((Double(millieSec)/100).truncatingRemainder(dividingBy: 60))*10)/10.0
+		if sec < 10 {
+			secStr = "0\(sec)"
+		} else {
+			secStr = "\(sec)"
 		}
-		var millie = String((Int(millieSec%10000)*100)/100)
-		if millie.count == 1 {
-			millie = "0\(millie)"
-		}
-		print("\(min):\(sec).\(millie)")
-		timerLabel.text = "\(min):\(sec).\(millie)"
+//		print("\(min):\(sec)")
+		timerLabel.text = "\(min):\(secStr)"
 	}
 	
 	@IBAction func startButton(_ sender: UIButton) {
@@ -66,17 +56,15 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func resetButton(_ sender: UIButton) {
-		count = 99
-		seconds = 9
-		timerLabel.text = "00:0\(seconds).\(count)"
-		self.timer.invalidate()
-		
+		millieSeconds = 60000
+		setTimerLabel(millieSec: millieSeconds)
+		if self.timer.isValid {
+			self.timer.invalidate()
+		}
 	}
 	@IBAction func pauseButton(_ sender: UIButton) {
-		self.timer.invalidate()
+		if self.timer.isValid {
+			self.timer.invalidate()
+		}
 	}
-	
-	
-	
 }
-
