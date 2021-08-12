@@ -10,20 +10,29 @@ import Charts
 
 class ViewController: UIViewController {
 	
+	@IBOutlet weak var bottomTimerLabel: UILabel!
 	@IBOutlet weak var timerLabel: UILabel!
-	
 	@IBOutlet weak var backgroundView1: UIView!
-	var millieSeconds = 120000
+	@IBOutlet weak var backgroundView2: UIView!
+	var millieSeconds = 60000
+	@IBOutlet weak var settingsBar: UIView!
 	
 	var timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(update), userInfo: nil, repeats: true)
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		timer.invalidate()
+		
+//		timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+		
+		
 		setTimerLabel(millieSec: millieSeconds)
 		
 		backgroundView1.layer.cornerRadius = 30
 		backgroundView1.layer.masksToBounds = true
 		backgroundView1.transform = backgroundView1.transform.rotated(by: CGFloat.pi)
+		
+		backgroundView2.layer.cornerRadius = 30
+		backgroundView2.layer.masksToBounds = true
 	}
 	
 	@objc func update() {
@@ -48,7 +57,11 @@ class ViewController: UIViewController {
 			secStr = "\(sec)"
 		}
 //		print("\(min):\(sec)")
-		timerLabel.text = "\(min):\(secStr)"
+		if min == "0" {
+			timerLabel.text = "\(secStr)"
+		} else {
+			timerLabel.text = "\(min):\(secStr)"
+		}
 	}
 	
 	@IBAction func startButton(_ sender: UIButton) {
@@ -67,4 +80,73 @@ class ViewController: UIViewController {
 			self.timer.invalidate()
 		}
 	}
+	
+	
+	@IBAction func topButton(_ sender: UIButton) {
+		if self.timer.isValid {
+			self.timer.invalidate()
+			UIView.animate(withDuration: 0.3,
+							delay: 0,
+							options: .curveEaseOut,
+							animations: { [weak self] in
+
+				
+				self?.backgroundView1.frame.size.height = 297
+				self?.timerLabel.frame.origin.y = 70
+				self?.timerLabel.font = self?.timerLabel.font.withSize(80)
+				
+				self?.settingsBar.frame.origin.y = 295
+				
+				self?.backgroundView2.frame.size.height = 544
+				self?.backgroundView2.frame.origin.y = 383
+
+				self?.bottomTimerLabel.frame.origin.y = 227
+				self?.bottomTimerLabel.font = self?.bottomTimerLabel.font.withSize(100)
+			
+
+				
+
+				
+				self?.timerLabel.textColor = UIColor.systemGreen
+				self?.backgroundView1.backgroundColor = UIColor.black
+		
+				self?.bottomTimerLabel.textColor = UIColor.black
+				self?.backgroundView2.backgroundColor = UIColor.systemGreen
+//				self?.timerLabel.textColor = UIColor.systemGreen
+//				self?.backgroundView1.backgroundColor = UIColor.black
+			})
+			
+			
+			
+		} else {
+			self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+
+			UIView.animate(withDuration: 0.3,
+							delay: 0,
+							options: .curveEaseOut,
+							animations: { [weak self] in
+				
+				self?.backgroundView1.frame.size.height = 544
+				self?.timerLabel.frame.origin.y = 227
+				self?.timerLabel.font = self?.timerLabel.font.withSize(100)
+
+				self?.settingsBar.frame.origin.y = 542
+
+				self?.backgroundView2.frame.size.height = 297
+				self?.backgroundView2.frame.origin.y = 629
+				
+				self?.bottomTimerLabel.frame.origin.y = 70
+				self?.bottomTimerLabel.font = self?.bottomTimerLabel.font.withSize(80)
+				
+				self?.timerLabel.textColor = UIColor.black
+				self?.backgroundView1.backgroundColor = UIColor.systemGreen
+				
+				self?.bottomTimerLabel.textColor = UIColor.systemGreen
+				self?.backgroundView2.backgroundColor = UIColor.black
+
+
+			})
+		}
+	}
+	
 }
