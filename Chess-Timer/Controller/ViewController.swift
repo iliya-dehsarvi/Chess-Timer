@@ -10,14 +10,22 @@ import Charts
 
 class ViewController: UIViewController {
 	
+	@IBOutlet weak var topButtonInstance: UIButton!
+	@IBOutlet weak var bottomButtonInstance: UIButton!
+	
 	@IBOutlet weak var bottomTimerLabel: UILabel!
 	@IBOutlet weak var timerLabel: UILabel!
+	
 	@IBOutlet weak var backgroundView1: UIView!
 	@IBOutlet weak var backgroundView2: UIView!
-	var millieSeconds = 60000
+	var topMillieSeconds = 60000
+	var bottomMillieSeconds = 60000
+
+	var turn = 0
+	
 	@IBOutlet weak var settingsBar: UIView!
 	
-	var timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+	var timer = Timer()
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		timer.invalidate()
@@ -25,7 +33,7 @@ class ViewController: UIViewController {
 //		timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(update), userInfo: nil, repeats: true)
 		
 		
-		setTimerLabel(millieSec: millieSeconds)
+		setTimerLabel()
 		
 		backgroundView1.layer.cornerRadius = 30
 		backgroundView1.layer.masksToBounds = true
@@ -36,14 +44,29 @@ class ViewController: UIViewController {
 	}
 	
 	@objc func update() {
-		setTimerLabel(millieSec: millieSeconds)
-		millieSeconds -= 1
+		if turn == 1 {
+			timerLabel.text = setTimerLabel()
+
+			topMillieSeconds -= 1
+		} else if turn == -1 {
+			bottomTimerLabel.text = setTimerLabel()
+
+			bottomMillieSeconds -= 1
+		}
 	}
 	
-	private func setTimerLabel(millieSec: Int) {
-		print(millieSeconds)
-		if millieSeconds == 0 {
-			self.timer.invalidate()
+	private func setTimerLabel() -> String {
+		var millieSec = 0
+		if turn == 1 {
+			millieSec = topMillieSeconds
+		} else if turn == -1 {
+			millieSec = bottomMillieSeconds
+		} else {
+			millieSec = 60000
+		}
+		
+		if millieSec == 0 {
+			timer.invalidate()
 		}
 		var min = "\(Int((millieSec/1000)/60))"
 //		if min.count == 1 {
@@ -58,9 +81,9 @@ class ViewController: UIViewController {
 		}
 //		print("\(min):\(sec)")
 		if min == "0" {
-			timerLabel.text = "\(secStr)"
+			return "\(secStr)"
 		} else {
-			timerLabel.text = "\(min):\(secStr)"
+			return "\(min):\(secStr)"
 		}
 	}
 	
@@ -69,11 +92,11 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func resetButton(_ sender: UIButton) {
-		millieSeconds = 60000
-		setTimerLabel(millieSec: millieSeconds)
-		if self.timer.isValid {
-			self.timer.invalidate()
-		}
+//		millieSeconds = 60000
+//		setTimerLabel(millieSec: millieSeconds)
+//		if self.timer.isValid {
+//			self.timer.invalidate()
+//		}
 	}
 	@IBAction func pauseButton(_ sender: UIButton) {
 		if self.timer.isValid {
@@ -83,8 +106,16 @@ class ViewController: UIViewController {
 	
 	
 	@IBAction func topButton(_ sender: UIButton) {
-		if self.timer.isValid {
-			self.timer.invalidate()
+		if turn == 0 {
+			self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+			turn = 1
+		}
+		if turn == 1 {
+//			self.timer.invalidate()
+			turn = -1
+			topButtonInstance.isHidden = true
+			bottomButtonInstance.isHidden = false
+
 			UIView.animate(withDuration: 0.3,
 							delay: 0,
 							options: .curveEaseOut,
@@ -118,13 +149,16 @@ class ViewController: UIViewController {
 			
 			
 			
-		} else {
-			self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+		} else if turn == -1 {
+			turn = 1
+			topButtonInstance.isHidden = false
+			bottomButtonInstance.isHidden = true
 
 			UIView.animate(withDuration: 0.3,
 							delay: 0,
 							options: .curveEaseOut,
 							animations: { [weak self] in
+
 				
 				self?.backgroundView1.frame.size.height = 544
 				self?.timerLabel.frame.origin.y = 227
@@ -147,6 +181,13 @@ class ViewController: UIViewController {
 
 			})
 		}
+	}
+	@IBAction func bottomButton(_ sender: UIButton) {
+		if turn == 0 {
+			self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+			turn = -1
+		}
+		
 	}
 	
 }
