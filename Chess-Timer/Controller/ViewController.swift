@@ -18,10 +18,13 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var backgroundView1: UIView!
 	@IBOutlet weak var backgroundView2: UIView!
-	var topMillieSeconds = 1000
-	var bottomMillieSeconds = 1000
+	var topMillieSeconds = 300
+	var bottomMillieSeconds = 300
 
 	var turn = 0
+	override var prefersStatusBarHidden: Bool {
+	    return true
+	}
 	
 	@IBOutlet weak var settingsBar: UIView!
 	
@@ -30,7 +33,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 //		timer.invalidate()
 
-		setTimerLabel()
+//		setTimerLabel()
 		
 		backgroundView1.layer.cornerRadius = 30
 		backgroundView1.layer.masksToBounds = true
@@ -74,26 +77,39 @@ class ViewController: UIViewController {
 		}
 		print(millieSec)
 
-		var min = "\(Int((millieSec/1000)/60))"
-//		if min.count == 1 {
-//			min = "0\(min)"
+//		var min = "\(Int((millieSec/100)/60))"
+////		if min.count == 1 {
+////			min = "0\(min)"
+////		}
+//		var secStr: String
+//		var sec = Int(round(((Double(millieSec)/100).truncatingRemainder(dividingBy: 60))*10)/10.0)
+//		if sec < 10 {
+//			secStr = "0\(sec)"
+//		} else {
+//			secStr = "\(sec)"
 //		}
-		var secStr: String
-		var sec = round(((Double(millieSec)/100).truncatingRemainder(dividingBy: 60))*10)/10.0
-		if sec < 10 {
-			secStr = "0\(sec)"
-		} else {
-			secStr = "\(sec)"
-		}
 //		print("\(min):\(sec)")
-		if min == "0" {
-			return "\(secStr)"
-		} else {
-			return "\(min):\(secStr)"
+		
+		let min = "\(millieSec/60)"
+		var sec = "\(millieSec%60)"
+		if millieSec%60 < 10 {
+			sec = "0\(sec)"
 		}
+		if min == "0" {
+			return "\(sec)"
+		} else {
+			return "\(min):\(sec)"
+		}
+//		if min == "0" {
+//			return "\(secStr)"
+//		} else {
+//			return "\(min):\(secStr)"
+//		}
 	}
 	@IBAction func startButton(_ sender: UIButton) {
-		self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+		if self.timer.isValid == false {
+			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+		}
 	}
 	@IBAction func resetButton(_ sender: UIButton) {
 //		millieSeconds = 60000
@@ -114,7 +130,7 @@ class ViewController: UIViewController {
 //			timer.invalidate()
 //		}
 		if turn == 0 {
-			self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
 //			self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
 //				self.update()
 //				if self.topMillieSeconds == 0 {
@@ -152,11 +168,11 @@ class ViewController: UIViewController {
 				
 
 				
-				self?.timerLabel.textColor = UIColor.systemGreen
+				self?.timerLabel.textColor = UIColor.white
 				self?.backgroundView1.backgroundColor = UIColor.black
 		
-				self?.bottomTimerLabel.textColor = UIColor.black
-				self?.backgroundView2.backgroundColor = UIColor.systemGreen
+				self?.bottomTimerLabel.textColor = UIColor.white
+				self?.backgroundView2.backgroundColor = UIColor.systemIndigo
 //				self?.timerLabel.textColor = UIColor.systemGreen
 //				self?.backgroundView1.backgroundColor = UIColor.black
 			})
@@ -183,10 +199,10 @@ class ViewController: UIViewController {
 				self?.bottomTimerLabel.frame.origin.y = 70
 				self?.bottomTimerLabel.font = self?.bottomTimerLabel.font.withSize(80)
 				
-				self?.timerLabel.textColor = UIColor.black
-				self?.backgroundView1.backgroundColor = UIColor.systemGreen
+				self?.timerLabel.textColor = UIColor.white
+				self?.backgroundView1.backgroundColor = UIColor.systemIndigo
 				
-				self?.bottomTimerLabel.textColor = UIColor.systemGreen
+				self?.bottomTimerLabel.textColor = UIColor.white
 				self?.backgroundView2.backgroundColor = UIColor.black
 			})
 		}
@@ -194,7 +210,7 @@ class ViewController: UIViewController {
 	
 	@IBAction func bottomButton(_ sender: UIButton) {
 		if turn == 0 {
-			self.timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
 //			self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
 //				self.update()
 //				if self.bottomMillieSeconds == 0 {
