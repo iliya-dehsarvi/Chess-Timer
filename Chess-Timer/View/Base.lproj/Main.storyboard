@@ -56,7 +56,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain">
-                                            <imageReference key="image" image="pause.circle" catalog="system" symbolScale="large"/>
+                                            <imageReference key="image" image="x.circle" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -127,7 +127,10 @@
                         <outlet property="backgroundView2" destination="JN2-1M-olU" id="Mdd-ON-be9"/>
                         <outlet property="bottomButtonInstance" destination="wHJ-C9-9eY" id="o4c-pW-kSL"/>
                         <outlet property="bottomTimerLabel" destination="K16-bD-c8E" id="4Cj-sq-nNH"/>
+                        <outlet property="playPauseButton" destination="ulX-Of-8JJ" id="mBF-ci-UOk"/>
+                        <outlet property="resetButton" destination="zLs-3c-nRQ" id="AwG-bq-u6n"/>
                         <outlet property="settingsBar" destination="P2H-B1-GxN" id="wVm-G6-ILk"/>
+                        <outlet property="settingsButton" destination="enP-Zf-vD4" id="F0q-6r-lRG"/>
                         <outlet property="timerLabel" destination="MeR-BP-OqB" id="ZxP-7C-PhL"/>
                         <outlet property="topButtonInstance" destination="ejC-6V-viu" id="Axb-tJ-Mnv"/>
                     </connections>
@@ -150,6 +153,24 @@
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iju-k1-t2J">
+                                <rect key="frame" x="8" y="270" width="412" height="365"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFb-IM-vvc">
+                                        <rect key="frame" x="8" y="42" width="143" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DHq-Z3-koo">
+                                        <rect key="frame" x="8" y="78" width="396" height="117"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LJd-TO-Nnc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -157,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgv-fV-Rac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399" y="207"/>
+            <point key="canvasLocation" x="1396.2616822429907" y="206.695464362851"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L5J-qV-tU9">
@@ -244,6 +265,7 @@
         <image name="pause.circle" catalog="system" width="128" height="121"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="trash.circle" catalog="system" width="128" height="121"/>
+        <image name="x.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

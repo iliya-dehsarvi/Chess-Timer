@@ -9,6 +9,9 @@ import UIKit
 import Charts
 
 class ViewController: UIViewController {
+	@IBOutlet weak var settingsButton: UIButton!
+	@IBOutlet weak var playPauseButton: UIButton!
+	@IBOutlet weak var resetButton: UIButton!
 	
 	@IBOutlet weak var topButtonInstance: UIButton!
 	@IBOutlet weak var bottomButtonInstance: UIButton!
@@ -31,6 +34,9 @@ class ViewController: UIViewController {
 	var timer = Timer()
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		
+		
 //		timer.invalidate()
 
 //		setTimerLabel()
@@ -107,8 +113,16 @@ class ViewController: UIViewController {
 //		}
 	}
 	@IBAction func startButton(_ sender: UIButton) {
-		if self.timer.isValid == false {
+		if self.timer.isValid {
+			self.timer.invalidate()
+			if let image = UIImage(systemName: "play.circle") {
+				self.playPauseButton.setImage(image, for: .normal)
+			}
+		} else {
 			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+			if let image = UIImage(systemName: "pause.circle") {
+				self.playPauseButton.setImage(image, for: .normal)
+			}
 		}
 	}
 	@IBAction func resetButton(_ sender: UIButton) {
@@ -119,9 +133,9 @@ class ViewController: UIViewController {
 //		}
 	}
 	@IBAction func pauseButton(_ sender: UIButton) {
-		if self.timer.isValid {
-			self.timer.invalidate()
-		}
+//		if self.timer.isValid {
+//			self.timer.invalidate()
+//		}
 	}
 	@IBAction func topButton(_ sender: UIButton) {
 //		if bottomMillieSeconds == 0 {
@@ -129,7 +143,7 @@ class ViewController: UIViewController {
 //		} else if topMillieSeconds == 0 {
 //			timer.invalidate()
 //		}
-		if turn == 0 {
+		if turn == 0 || self.timer.isValid == false {
 			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
 //			self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
 //				self.update()
@@ -139,6 +153,9 @@ class ViewController: UIViewController {
 //
 //			}
 			turn = 1
+			if let image = UIImage(systemName: "pause.circle") {
+				self.playPauseButton.setImage(image, for: .normal)
+			}
 		}
 		if turn == 1 {
 //			self.timer.invalidate()
@@ -209,7 +226,7 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func bottomButton(_ sender: UIButton) {
-		if turn == 0 {
+		if turn == 0 || self.timer.isValid == false {
 			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
 //			self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
 //				self.update()
@@ -220,6 +237,10 @@ class ViewController: UIViewController {
 //			}
 
 			turn = -1
+			
+			if let image = UIImage(systemName: "pause.circle") {
+				self.playPauseButton.setImage(image, for: .normal)
+			}
 		}
 	}
 }
