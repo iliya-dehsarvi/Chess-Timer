@@ -19,23 +19,27 @@ class ViewController: UIViewController {
 	@IBOutlet weak var bottomTimerLabel: UILabel!
 	@IBOutlet weak var timerLabel: UILabel!
 	
+	@IBOutlet weak var topCounterLabel: UILabel!
+	@IBOutlet weak var bottomCounterLabel: UILabel!
+	
 	@IBOutlet weak var backgroundView1: UIView!
 	@IBOutlet weak var backgroundView2: UIView!
+	
 	var topMillieSeconds = 300
 	var bottomMillieSeconds = 300
 
+	var topCounter = 0
+	var bottomCounter = 0
+
 	var turn = 0
-	override var prefersStatusBarHidden: Bool {
-	    return true
-	}
+
 	
 	@IBOutlet weak var settingsBar: UIView!
 	
 	var timer = Timer()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		
 		
 //		timer.invalidate()
 
@@ -44,18 +48,22 @@ class ViewController: UIViewController {
 		backgroundView1.layer.cornerRadius = 30
 		backgroundView1.layer.masksToBounds = true
 		backgroundView1.transform = backgroundView1.transform.rotated(by: CGFloat.pi)
+		topCounterLabel.transform = topCounterLabel.transform.rotated(by: CGFloat.pi)
 		
 		backgroundView2.layer.cornerRadius = 30
 		backgroundView2.layer.masksToBounds = true
 	}
+	
+	override var prefersStatusBarHidden: Bool {
+	    return true
+	}
+	
 	@objc func update() {
 		if turn == 1 {
 			timerLabel.text = setTimerLabel()
-
 			topMillieSeconds -= 1
 		} else if turn == -1 {
 			bottomTimerLabel.text = setTimerLabel()
-
 			bottomMillieSeconds -= 1
 		}
 	}
@@ -144,7 +152,10 @@ class ViewController: UIViewController {
 //			timer.invalidate()
 //		}
 		if turn == 0 || self.timer.isValid == false {
+			turn = 1
 			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+			self.bottomCounterLabel.textColor = UIColor.white
+
 //			self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
 //				self.update()
 //				if self.topMillieSeconds == 0 {
@@ -152,14 +163,18 @@ class ViewController: UIViewController {
 //				}
 //
 //			}
-			turn = 1
 			if let image = UIImage(systemName: "pause.circle") {
 				self.playPauseButton.setImage(image, for: .normal)
 			}
+		} else if turn == 1 {
+			topCounter+=1
+			topCounterLabel.text = "\(topCounter)"
 		}
 		if turn == 1 {
 //			self.timer.invalidate()
 			turn = -1
+
+
 			topButtonInstance.isHidden = true
 			bottomButtonInstance.isHidden = false
 
@@ -172,6 +187,10 @@ class ViewController: UIViewController {
 				self?.backgroundView1.frame.size.height = 297
 				self?.timerLabel.frame.origin.y = 70
 				self?.timerLabel.font = self?.timerLabel.font.withSize(80)
+				
+//				self?.bottomCounterLabel.frame.origin.y = 303
+//				self?.topCounterLabel.frame.origin.y = 550
+
 				
 				self?.settingsBar.frame.origin.y = 295
 				
@@ -207,6 +226,9 @@ class ViewController: UIViewController {
 				self?.backgroundView1.frame.size.height = 544
 				self?.timerLabel.frame.origin.y = 227
 				self?.timerLabel.font = self?.timerLabel.font.withSize(100)
+				
+//				self?.bottomCounterLabel.frame.origin.y = 550
+//				self?.topCounterLabel.frame.origin.y = 697
 
 				self?.settingsBar.frame.origin.y = 542
 
@@ -226,8 +248,10 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func bottomButton(_ sender: UIButton) {
+
 		if turn == 0 || self.timer.isValid == false {
 			self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+			self.bottomCounterLabel.textColor = UIColor.white
 //			self.timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
 //				self.update()
 //				if self.bottomMillieSeconds == 0 {
@@ -241,6 +265,9 @@ class ViewController: UIViewController {
 			if let image = UIImage(systemName: "pause.circle") {
 				self.playPauseButton.setImage(image, for: .normal)
 			}
+		} else {
+			bottomCounter+=1
+			bottomCounterLabel.text = "\(bottomCounter)"
 		}
 	}
 }
