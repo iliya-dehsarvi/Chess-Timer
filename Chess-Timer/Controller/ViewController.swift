@@ -9,6 +9,12 @@ import UIKit
 import Charts
 
 class ViewController: UIViewController {
+	
+	@IBOutlet weak var settingsMenu: UIView!
+	
+	
+	
+	
 	@IBOutlet weak var colorsBackGroundView: UIView!
 //	@IBOutlet weak var test: UIView!
 	
@@ -53,6 +59,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		colorsBackGroundView.isHidden = true
+		settingsMenu.isHidden = true
 
 //		timer.invalidate()
 
@@ -177,6 +184,8 @@ class ViewController: UIViewController {
 						delay: 0,
 						options: .curveEaseOut,
 						animations: { [weak self] in
+			self?.settingsMenu.isHidden = false
+
 			self?.backgroundView1.frame.size.height = 134
 			self?.backgroundView1.backgroundColor = self?.themeColor
 			self?.timerLabel.frame.origin.x = 43
@@ -251,7 +260,7 @@ class ViewController: UIViewController {
 //			self.timer.invalidate()
 			turn = -1
 
-
+//			settingsMenu.isHidden = true
 			topButtonInstance.isHidden = true
 			bottomButtonInstance.isHidden = false
 
@@ -260,7 +269,8 @@ class ViewController: UIViewController {
 							options: .curveEaseOut,
 							animations: { [weak self] in
 
-				
+				self?.settingsMenu.isHidden = true
+
 				self?.backgroundView1.frame.size.height = 297
 				self?.timerLabel.frame.origin.y = 70
 				self?.timerLabel.font = self?.timerLabel.font.withSize(80)
@@ -308,6 +318,8 @@ class ViewController: UIViewController {
 			})
 		} else if turn == -1 {
 			turn = 1
+//			settingsMenu.isHidden = true
+			
 			topButtonInstance.isHidden = false
 			bottomButtonInstance.isHidden = true
 
@@ -315,6 +327,8 @@ class ViewController: UIViewController {
 							delay: 0,
 							options: .curveEaseOut,
 							animations: { [weak self] in
+
+				self?.settingsMenu.isHidden = true
 
 				
 				self?.backgroundView1.frame.size.height = 544
