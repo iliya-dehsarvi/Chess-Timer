@@ -392,16 +392,55 @@ class ViewController: UIViewController {
 		}
 	}
 	
+
+	@IBAction func setTimeTo1(_ sender: UIButton) {
+		topMillieSeconds = 60
+		bottomMillieSeconds = 60
+		timerLabel.text = "1:00"
+		bottomTimerLabel.text = "1:00"
+	}
+	
+	@IBAction func setTimeto3(_ sender: UIButton) {
+		topMillieSeconds = 180
+		bottomMillieSeconds = 180
+		timerLabel.text = "3:00"
+		bottomTimerLabel.text = "3:00"
+	}
+	
+	
+	@IBAction func setTimeTo5(_ sender: UIButton) {
+		topMillieSeconds = 300
+		bottomMillieSeconds = 300
+		timerLabel.text = "5:00"
+		bottomTimerLabel.text = "5:00"
+	}
+	
+	
 	@IBAction func setWhite(_ sender: UIButton) {
-		print(1)
+		themeColor = .white
+		
+		backgroundView1.backgroundColor = themeColor
+		backgroundView2.backgroundColor = themeColor
 	}
 	@IBAction func setTeal(_ sender: UIButton) {
+		themeColor = .systemTeal
+		backgroundView1.backgroundColor = themeColor
+		backgroundView2.backgroundColor = themeColor
 	}
 	@IBAction func setIndego(_ sender: UIButton) {
+		themeColor = .systemIndigo
+		backgroundView1.backgroundColor = themeColor
+		backgroundView2.backgroundColor = themeColor
 	}
 	@IBAction func setPurple(_ sender: UIButton) {
+		themeColor = .systemPurple
+		backgroundView1.backgroundColor = themeColor
+		backgroundView2.backgroundColor = themeColor
 	}
 	@IBAction func setOrange(_ sender: UIButton) {
+		themeColor = .systemOrange
+		backgroundView1.backgroundColor = themeColor
+		backgroundView2.backgroundColor = themeColor
 	}
 	
 	
