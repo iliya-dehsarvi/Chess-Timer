@@ -163,68 +163,6 @@
                                 <rect key="frame" x="0.0" y="424" width="428" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iju-k1-t2J">
-                                        <rect key="frame" x="8" y="-73" width="412" height="238"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcY-JB-9vL">
-                                                <rect key="frame" x="93" y="84" width="70" height="70"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemTealColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="setLightBlueTheme:" destination="MoL-9d-ktK" eventType="touchUpInside" id="YHx-2S-1ho"/>
-                                                    <action selector="setTeal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fg-L1-FaN"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7m-VD-vD0">
-                                                <rect key="frame" x="327" y="84" width="70" height="70"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="setOrange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6DK-cA-D0t"/>
-                                                    <action selector="setOrangeTheme:" destination="MoL-9d-ktK" eventType="touchUpInside" id="JEX-OT-IbF"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hrq-pD-KRd">
-                                                <rect key="frame" x="249" y="84" width="70" height="70"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="setPurple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcz-Wj-abK"/>
-                                                    <action selector="setPurpleTheme:" destination="MoL-9d-ktK" eventType="touchUpInside" id="RPv-KH-b45"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlq-GB-fjD">
-                                                <rect key="frame" x="15" y="84" width="70" height="70"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="setWhite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aop-0w-gOv"/>
-                                                    <action selector="setWhiteTheme:" destination="MoL-9d-ktK" eventType="touchUpInside" id="Pt9-mJ-EQK"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxQ-0k-DE0">
-                                                <rect key="frame" x="171" y="84" width="70" height="70"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="setDarkBlueTheme:" destination="MoL-9d-ktK" eventType="touchUpInside" id="S9f-SL-SY3"/>
-                                                    <action selector="setIndego:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dng-HW-IRq"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="zLs-3c-nRQ">
                                         <rect key="frame" x="257" y="4" width="70" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -266,7 +204,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR2-Ek-44P">
                                 <rect key="frame" x="338" y="836" width="70" height="70"/>
@@ -292,7 +230,6 @@
                         <outlet property="bottomButtonInstance" destination="wHJ-C9-9eY" id="o4c-pW-kSL"/>
                         <outlet property="bottomCounterLabel" destination="DR2-Ek-44P" id="MjQ-xQ-2cU"/>
                         <outlet property="bottomTimerLabel" destination="K16-bD-c8E" id="4Cj-sq-nNH"/>
-                        <outlet property="colorsBackGroundView" destination="Iju-k1-t2J" id="MGm-Ko-DVt"/>
                         <outlet property="playPauseButton" destination="ulX-Of-8JJ" id="mBF-ci-UOk"/>
                         <outlet property="resetButton" destination="zLs-3c-nRQ" id="AwG-bq-u6n"/>
                         <outlet property="settingsBar" destination="P2H-B1-GxN" id="VXi-kP-UHK"/>
@@ -325,13 +262,6 @@
                         <viewLayoutGuide key="safeArea" id="LJd-TO-Nnc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <connections>
-                        <outlet property="darkBlueSettingButton" destination="mxQ-0k-DE0" id="GS7-vg-Una"/>
-                        <outlet property="lightBlueSettingButton" destination="IcY-JB-9vL" id="HmA-h6-Rf6"/>
-                        <outlet property="orangeSettingButton" destination="N7m-VD-vD0" id="QA7-7F-j5k"/>
-                        <outlet property="purpleSettingButton" destination="Hrq-pD-KRd" id="XKq-2A-LDi"/>
-                        <outlet property="whiteSettingButton" destination="qlq-GB-fjD" id="4Jz-KC-9pa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgv-fV-Rac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

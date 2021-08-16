@@ -12,19 +12,6 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var settingsMenu: UIView!
 	
-	
-	
-	
-	@IBOutlet weak var colorsBackGroundView: UIView!
-//	@IBOutlet weak var test: UIView!
-	
-	@IBOutlet weak var whiteSettingButton: UIButton!
-	@IBOutlet weak var lightBlueSettingButton: UIButton!
-	@IBOutlet weak var darkBlueSettingButton: UIButton!
-	@IBOutlet weak var purpleSettingButton: UIButton!
-	@IBOutlet weak var orangeSettingButton: UIButton!
-	
-	
 	@IBOutlet weak var settingsButton: UIButton!
 	@IBOutlet weak var playPauseButton: UIButton!
 	@IBOutlet weak var resetButton: UIButton!
@@ -58,7 +45,6 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		colorsBackGroundView.isHidden = true
 		settingsMenu.isHidden = true
 
 //		timer.invalidate()
@@ -162,6 +148,32 @@ class ViewController: UIViewController {
 //			return "\(min):\(secStr)"
 //		}
 	}
+	
+	func foldBackgrounds() {
+		if self.timer.isValid {
+			self.timer.invalidate()
+			if let image = UIImage(systemName: "play.circle") {
+				self.playPauseButton.setImage(image, for: .normal)
+			}
+		}
+		UIView.animate(withDuration: 0.4,
+						delay: 0,
+						options: .curveEaseOut,
+						animations: { [weak self] in
+			self?.backgroundView1.frame.size.height = 416
+			self?.backgroundView1.frame.origin.y = 0
+			self?.backgroundView1.backgroundColor = self?.themeColor
+			
+			self?.backgroundView2.frame.size.height = 415
+			self?.backgroundView2.frame.origin.y = 511
+			self?.backgroundView2.backgroundColor = self?.themeColor
+			
+			
+		})
+		
+	}
+	
+	
 	@IBAction func startButton(_ sender: UIButton) {
 		if self.timer.isValid {
 			self.timer.invalidate()
@@ -429,11 +441,6 @@ class ViewController: UIViewController {
 	}
 	@IBAction func setIndego(_ sender: UIButton) {
 		themeColor = .systemIndigo
-		backgroundView1.backgroundColor = themeColor
-		backgroundView2.backgroundColor = themeColor
-	}
-	@IBAction func setPurple(_ sender: UIButton) {
-		themeColor = .systemPurple
 		backgroundView1.backgroundColor = themeColor
 		backgroundView2.backgroundColor = themeColor
 	}
