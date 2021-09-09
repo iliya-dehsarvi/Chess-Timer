@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Charts
+//import Charts
 
 class ViewController: UIViewController {
 	
